@@ -39,3 +39,14 @@ def january_analysis():
             "error": "Unable to retrieve or analyse Elexon data",
             "details": str(error),
         }), 502
+@api.get("/analysis/january-2026")
+def january_analysis():
+    from app.elexon import analyse_january
+
+    try:
+        return jsonify(analyse_january())
+    except Exception as error:
+        return jsonify({
+            "error": "Unable to retrieve or analyse Elexon data",
+            "details": str(error)
+        }), 502
