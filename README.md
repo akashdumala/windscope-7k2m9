@@ -89,6 +89,6 @@ ChatGPT was used to assist with implementation, debugging, and documentation. Th
 
 ## Deployment
 
-Public application URL: To be added after deployment.
+Public application URL: https://windscope-7k2m9.vercel.app
 
-GitHub repository URL: To be added after publishing.
+GitHub repository URL: https://github.com/akashdumala/windscope-7k2m9
