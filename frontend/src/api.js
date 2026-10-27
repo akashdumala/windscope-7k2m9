@@ -1,4 +1,3 @@
-
 const API_BASE_URL = "https://windscope-7k2m9.onrender.com/api";
 
 export async function getDashboardSummary() {
