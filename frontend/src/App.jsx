@@ -127,7 +127,7 @@ function App() {
           description: `${formatNumber(
             analysis.matched_intervals
           )} of ${formatNumber(
-            analysis.expected_january_intervals
+            analysis.expected_january_intervals ?? 744
           )} hourly intervals matched`,
           Icon: Target,
           decimals: 1,
