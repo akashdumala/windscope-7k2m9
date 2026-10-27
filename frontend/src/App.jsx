@@ -19,8 +19,8 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import "./App.css";
+import { getJanuaryAnalysis } from "./api";
 
-const API_URL = "/api/analysis/january-2026";
 
 function formatNumber(value, decimals = 0) {
   if (typeof value !== "number" || !Number.isFinite(value)) {
@@ -63,13 +63,7 @@ function App() {
         setLoading(true);
         setError("");
 
-        const response = await fetch(API_URL);
-
-        if (!response.ok) {
-          throw new Error(`API request failed (${response.status})`);
-        }
-
-        const data = await response.json();
+        const data = await getJanuaryAnalysis();
 
         if (data.error) {
           throw new Error(data.error);
