@@ -7,7 +7,10 @@ export async function getDashboardSummary() {
   );
 
   if (!response.ok) {
-    throw new Error(`API request failed (${response.status})`);
+    const details = await response.text();
+    throw new Error(
+      `API request failed (${response.status}): ${details.slice(0, 150)}`
+    );
   }
 
   return response.json();
